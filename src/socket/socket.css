@@ -1,0 +1,26 @@
+
+.app-container {
+  text-align: center;
+  margin: 20px
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-right: 270px; 
+}
+
+.battery {
+    color: brown;
+}
+.gps {
+  color: green;
+}
+.status {
+  color: chartreuse;
+}
+@media (min-width: 768px) {
+  .d-md-table-header-group {
+    display: table-header-group !important;
+  }
+}
