@@ -11,6 +11,7 @@ import { getCurrentAdminState } from "Utils/Functions";
 import Button from "@mui/material/Button";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { useSelector } from "react-redux";
+import { useMediaQuery } from '@mui/material';
 
 function Online_Offline_Users() {
   const { isLoaded } = useJsApiLoader({ 
@@ -150,8 +151,9 @@ function Online_Offline_Users() {
     setMapCenter({ lat: centerLat, lng: centerLng });
   };
 
+  const isLargeScreen = useMediaQuery('(min-width:1200px)');
   const mapStyles = {
-    height: "400px",
+     height: isLargeScreen ? '550px' : '400px',  // Larger height for large screens
     width: "100%",
   };
 

@@ -89,12 +89,12 @@ export default function data() {
         align: "center",
       },
       {
-        Header: <span style={{ color: "blue" }}>Start Ride</span>,
+        Header: <span style={{ color: "blue" }}>Journey Started At</span>,
         accessor: "StartRide",
         align: "center",
       },
       {
-        Header: <span style={{ color: "blue" }}>Stop Ride</span>,
+        Header: <span style={{ color: "blue" }}>Journey Ended At</span>,
         accessor: "EndRide",
         align: "center",
       },
