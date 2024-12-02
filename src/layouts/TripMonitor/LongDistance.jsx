@@ -105,19 +105,19 @@ function LongDistance() {
                                     IsMoving: (() => {
                                         if (longTrip.Trip_Status === 'Moving') {
                                           return (
-                                            <Button variant="contained" sx={{ backgroundColor: "green", color: "white" }}>
+                                            <Button variant="contained" className="text-white" sx={{ backgroundColor: "green", color: "white" }}>
                                               Running
                                             </Button>
                                           ); // Custom green color
                                         } else if (longTrip.Trip_Status === 'Arrived') {
                                           return (
-                                            <Button variant="contained" sx={{ backgroundColor: "blue", color: "white" }}>
+                                            <Button variant="contained" className="text-black" sx={{ backgroundColor: "yellow", color: "white" }}>
                                               Arrived
                                             </Button>
                                           ); // Custom blue color
                                         } else {
                                           return (
-                                            <Button variant="contained" sx={{ backgroundColor: "red", color: "white" }}>
+                                            <Button variant="contained" className="text-white" sx={{ backgroundColor: "red", color: "white" }}>
                                               Stopped
                                             </Button>
                                           ); // Custom red color

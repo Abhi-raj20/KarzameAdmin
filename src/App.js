@@ -258,9 +258,12 @@ export default function App() {
 
         if (
           user &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+          allData &&
           user.SOS
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) && user.SOS  )
+
           const sosDataRef = ref(db, `users/${userId}/SOS`);
 
           // Listen for new child nodes added to 'SOS' for this user
@@ -416,9 +419,10 @@ export default function App() {
 
         if (
           user &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+          allData &&
           user.Police_Alerts
         ) {
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const policeAlertsDataRef = ref(db, `users/${userId}/Police_Alerts`);
 
           // Listen for new child nodes added to 'Police_Alerts' for this user
@@ -481,9 +485,11 @@ export default function App() {
 
         if (
           user &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+         allData &&
           user.VirtualHomeCheck
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const virtualHomeCheckDataRef = ref(db, `users/${userId}/VirtualHomeCheck`);
 
           // Listen for new child nodes added to 'VirtualHomeCheck' for this user
@@ -641,9 +647,11 @@ export default function App() {
         // Check if the user state matches the current admin state
         if (
           user.userState &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+         allData &&
           user.GeoFence
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const geoFenceDataRef = ref(db, `users/${userId}/GeoFence`);
 
           // Listen for new child nodes added to 'GeoFence' for this user
@@ -696,9 +704,11 @@ export default function App() {
         // Check if the user state matches the current admin state
         if (
           user.userState &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+          allData &&
           user.BatteryLevels
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const batteryDataRef = ref(db, `users/${userId}/BatteryLevels`);
 
           // Listen for new child nodes added to 'BatteryLevels' for this user
@@ -752,9 +762,11 @@ export default function App() {
         // Check if the user state matches the current admin state
         if (
           user.userState &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+          allData &&
           user.wellBeingServicesData
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const wellBeingServicesDataRef = ref(db, `users/${userId}/wellBeingServicesData`);
 
           // Listen for new child nodes added to 'wellBeingServicesData' for this user
@@ -803,9 +815,11 @@ export default function App() {
         // Check if the user state matches the current admin state and if they have 'Scurity_agent_requests'
         if (
           user.userState &&
-          (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
+        allData &&
           user.Scurity_agent_requests
         ) {
+
+          // (allData || user.userState.toLowerCase() === currentAdminState.toLowerCase()) &&
           const Scurity_agent_requestsRef = ref(db, `users/${userId}/Scurity_agent_requests`);
 
           // Listen for new child nodes added to 'Scurity_agent_requests' for this user
@@ -936,7 +950,7 @@ export default function App() {
       bottom="2rem"
       zIndex={99}
       color="dark"
-      sx={{ cursor: "pointer" }}
+      sx={{ cursor: "pointer" }} 
       onClick={handleConfiguratorOpen}
     >
       <Icon fontSize="small" color="inherit">

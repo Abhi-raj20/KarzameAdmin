@@ -292,7 +292,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   return (
     <SidenavRoot
       {...rest}
-      variant="permanent"
+      variant="permanent" 
       ownerState={{ transparentSidenav, whiteSidenav, miniSidenav, darkMode }}
     >
       <MDBox pt={3} pb={1} px={4} textAlign="center">
@@ -512,7 +512,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           <span style={{ paddingRight: "24px" }}>
             <PersonIcon />
           </span>
-          <span style={{ paddingRight: "8px" }}>Trip Monitor</span>
+          <span style={{ paddingRight: "8px" }}>Trip Management</span>
           <ArrowDropDownIcon />
         </Button>
         {trip && (
@@ -546,6 +546,29 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               >
                 <SidenavCollapse
                   name={"Short Distance Escort"}
+                  icon={
+                    <SvgIcon fontSize="small">
+                      <circle cx="12" cy="12" r="4" fill="white" />
+                    </SvgIcon>
+                  } // color={textColor}
+                  active={false}
+                  noCollapse={false}
+                />
+              </NavLink>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", paddingLeft: 0 }}>
+              <NavLink
+                // key={key}
+                to={"/tripMonitor"}
+                // href={"href"}
+                key={"key"}
+              // color={textColor}
+              // target="_blank"
+              // rel="noreferrer"
+              // sx={{ textDecoratin: "none" }}
+              >
+                <SidenavCollapse
+                  name={"Trip Manager"}
                   icon={
                     <SvgIcon fontSize="small">
                       <circle cx="12" cy="12" r="4" fill="white" />

@@ -67,6 +67,12 @@ import TripMonitor from "layouts/TripMonitor";
 import LongDistance from "layouts/TripMonitor/LongDistance";
 import ShortDistance from "layouts/TripMonitor/ShortDistance";
 import Recharge from "layouts/recharge";
+import LocateTrack from "layouts/Map/LocateTrack";
+import LiveLocationTrack from "layouts/Map/liveLocationTrack";
+import FullScreenMap from "layouts/Map/fullScreen";
+import App1 from "layouts/Map/App1";
+import MapNavigation from "layouts/Map/MapNavigation";
+import FinalMap from "layouts/Map/FinalMap";
 // import LastLocation from "socket/LastLocation";
 
 var routes = [
@@ -400,8 +406,56 @@ var routes = [
     name: "Track",
     key: "track-user",
     icon: <Icon fontSize="small">Track</Icon>,
+    route: "/finalmap/:id",
+    component: <FinalMap />,
+  },
+  {
+    type: "",
+    name: "Track",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
     route: "/locateSos/:lat/:long",
     component: <LocateSos />,
+  },
+  {
+    type: "",
+    name: "LiveLocation",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
+    route: "/liveLocation/:lat/:long",
+    component: <LocateTrack />,
+  },
+  {
+    type: "",
+    name: "LiveLocationtrack",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
+    route: "/liveLocationTrack",
+    component: <LiveLocationTrack />,
+  },
+  {
+    type: "",
+    name: "LiveLocationtrack",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
+    route: "/fullscreenmap",
+    component: <FullScreenMap />,
+  },
+  {
+    type: "",
+    name: "LiveLocationtrack",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
+    route: "/app1map/:id",
+    component: <App1 />,
+  },
+  {
+    type: "",
+    name: "LiveLocationtrack",
+    key: "track-user",
+    icon: <Icon fontSize="small">Track</Icon>,
+    route: "/MapNavigation",
+    component: <MapNavigation />,
   },
 ];
 

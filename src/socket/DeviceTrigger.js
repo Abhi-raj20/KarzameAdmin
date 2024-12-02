@@ -57,7 +57,7 @@ import { useSelector } from "react-redux";
 // import projectsTableData from "layouts/tables/data/projectsTableData";
 
 
-const socket = io('http://localhost:4000', {
+const socket = io('wss://ws.itracknet.com', {
   withCredentials: true,
   extraHeaders: {
     'my-custom-header': 'abcd'
